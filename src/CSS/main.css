@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 93.75%
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 87.5%
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 81.25%
+  }
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh
+}
+
+body,
+input,
+button,
+select,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
