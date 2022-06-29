@@ -25,7 +25,7 @@ export const History = [
       correct: 'Coco Chanel, 1920s',
       incorrect1: 'Christian Dior, 1940s',
       incorrect2: 'Valentino Garavani, 1950s',
-      incorrect3: 'Miuccia Prada, 1930s '
+      incorrect3: 'Miuccia Prada, 1930s'
     }
   },
 

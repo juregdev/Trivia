@@ -34,3 +34,112 @@ select,
 textarea {
   font-family: 'Poppins', sans-serif;
 }
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: .5rem;
+  height: 5rem;
+}
+
+#conteiner {
+  height: calc(100vh - 5rem);
+  width: 100vw;
+  padding: 1rem;
+}
+
+#conteiner #chosses {
+  width: 100%;
+  height: 100%;
+
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+#conteiner #chosses button {
+  cursor: pointer;
+  width: 33%;
+  height: 45%;
+  padding: .5rem;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+
+
+  border-radius: 5px;
+  border: none;
+}
+
+#conteiner #chosses button:last-child {
+  height: 10%;
+  width: 100%;
+}
+
+@media screen and (max-width:320px) {
+
+
+  #conteiner button {
+    width: 45%;
+  }
+}
+
+#conteiner button:active {
+  opacity: .6;
+}
+
+#conteiner #modal {
+  padding: 1rem 7rem 7rem 7rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+#conteiner #modal #options {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: 1.1rem;
+}
+
+#conteiner #modal #options div {
+  width: 100%;
+  padding: .5rem;
+  cursor: pointer;
+
+  border-radius: 4px;
+}
+
+#conteiner #modal #options .checked {
+  background: green;
+  font-weight: 600;
+  color: #ffff
+}
+
+#conteiner #modal #sendQuestion {
+  width: 80%;
+  height: 4rem;
+
+  position: absolute;
+
+  bottom: 1rem;
+
+}
