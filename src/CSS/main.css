@@ -63,6 +63,7 @@ textarea {
 }
 
 #conteiner #chosses button {
+  position: relative;
   cursor: pointer;
   width: 33%;
   height: 45%;
@@ -71,15 +72,26 @@ textarea {
   font-size: 1.2rem;
   font-weight: bold;
 
-
-
   border-radius: 5px;
   border: none;
+  box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.15);
+
+  transition: .5s;
 }
 
 #conteiner #chosses button:last-child {
   height: 10%;
   width: 100%;
+}
+
+#conteiner #chosses .btnOption:hover {
+  background: #47b77f;
+  color: #fff;
+  z-index: 1;
+  transform: scale(1.01);
+
+
+
 }
 
 @media screen and (max-width:320px) {
@@ -97,6 +109,8 @@ textarea {
 #conteiner #modal {
   padding: 1rem 7rem 7rem 7rem;
   position: relative;
+  background: rgb(86, 123, 209);
+  color: #fff;
 
   display: flex;
   flex-direction: column;
@@ -104,9 +118,16 @@ textarea {
   align-items: center;
   gap: 1rem;
 
-  border: 2px solid black;
   border-radius: 10px;
+  box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.55);
+
 }
+
+#conteiner #modal p {
+  font-size: 1.2rem;
+  font-weight: 500
+}
+
 
 #conteiner #modal #options {
   width: 100%;
@@ -126,18 +147,38 @@ textarea {
   cursor: pointer;
 
   border-radius: 4px;
+
+  transition: .3s
+}
+
+#conteiner #modal #options div:hover {
+  background: rgb(110, 141, 212);
+}
+
+#conteiner #modal #options div p {
+  font-weight: 300;
 }
 
 #conteiner #modal #options .checked {
-  background: green;
-  font-weight: 600;
+  background: rgb(55, 92, 180);
+
   color: #ffff
+}
+
+#conteiner #modal #options .checked p {
+  font-weight: 600;
+}
+
+#conteiner #modal #options .checked:hover {
+  background: rgb(55, 92, 180)
 }
 
 #conteiner #modal #sendQuestion {
   width: 80%;
   height: 4rem;
 
+  background: #47b77f;
+  color: #ffff;
   position: absolute;
 
   bottom: 1rem;
@@ -163,8 +204,15 @@ textarea {
   gap: 1rem;
   padding: 1rem;
 
-  border: 1px solid black;
+  background: #47b77f;
+  color: #ffff;
+
+
   border-radius: 10px;
+}
+
+#finish button {
+  color: #47b77f
 }
 
 #warnings {
@@ -172,8 +220,7 @@ textarea {
   z-index: 1;
   width: 30%;
   overflow: hidden;
-  background-color: #ffff;
-
+  background: #fff;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.15);
@@ -188,10 +235,12 @@ textarea {
 @keyframes warnings {
   0% {
     width: 0;
+    font-size: 0;
   }
 
   100% {
     width: 30%;
+    font-size: 1.5rem;
   }
 
 }

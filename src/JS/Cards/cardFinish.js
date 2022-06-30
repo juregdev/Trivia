@@ -2,7 +2,7 @@ export const cardFinish = (acertos, nQuestoes) => {
   const card = `
   <div id="finish">
     <h1>Game Over</h1>
-    <p>Você acertou ${acertos} de ${nQuestoes}</p>
+    <p>Você acertou ${acertos + 1} de ${nQuestoes}</p>
 
     <button type="button" id="restart">Recomeçar</button>
   </div>
