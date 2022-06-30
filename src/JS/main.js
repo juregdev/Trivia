@@ -8,51 +8,43 @@ import { Television } from './Questions/Television.js'
 import { cardsCreate, shuffleArray } from './Cards/cardsCreate.js'
 
 export let Questions = []
-let i = 0
 
 const QuestionsOrganization = (QuestionChossed) => {
   let questionOrder = []
-
   QuestionChossed.forEach((Question) => {
     questionOrder = [...questionOrder, [Question]]
   })
   Questions = shuffleArray(questionOrder)
-
-
-  cardsCreate(Questions[0][0], 0)
+  cardsCreate(Questions[0][0], 0, 0)
 }
 
-
-
 window.addEventListener('click', (e) => {
-  let categoryChosed
+  let categoryChoosed
 
   switch (e.target.id) {
     case 'geography':
-      categoryChosed = Geography
+      categoryChoosed = Geography
       break;
     case 'history':
-      categoryChosed = History
+      categoryChoosed = History
       break;
     case 'music':
-      categoryChosed = Music
+      categoryChoosed = Music
       break;
     case 'sports':
-      categoryChosed = Sports
+      categoryChoosed = Sports
       break;
     case 'television':
-      categoryChosed = Television
+      categoryChoosed = Television
       break;
     case 'languages':
-      categoryChosed = Language
+      categoryChoosed = Language
       break;
     case 'allChoses':
-      categoryChosed = [...Geography, ...Music, ...Sports, ...Television, ...History, ...Language]
-      QuestionsOrganization(allCategory)
+      categoryChoosed = [...Geography, ...Music, ...Sports, ...Television, ...History, ...Language]
       break;
     default: return
-
   }
 
-  QuestionsOrganization(categoryChosed)
+  QuestionsOrganization(categoryChoosed)
 })

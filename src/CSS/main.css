@@ -143,3 +143,55 @@ textarea {
   bottom: 1rem;
 
 }
+
+@keyframes time {
+
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%
+  }
+}
+
+#finish {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#warnings {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  overflow: hidden;
+  background-color: #ffff;
+
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.15);
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  animation: warnings .5s
+}
+
+@keyframes warnings {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 30%;
+  }
+
+}

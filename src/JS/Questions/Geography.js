@@ -3,9 +3,9 @@ export const Geography = [
     statement: 'Qual país tem mais ilhas no mundo?',
     options: {
       correct: 'Suécia',
-      incorrect1: 'Finlândiade',
-      incorrect2: 'Noruêgade',
-      incorrect3: 'Canadáde'
+      incorrect1: 'Finlândia',
+      incorrect2: 'Noruêga',
+      incorrect3: 'Canadá'
     }
   },
 

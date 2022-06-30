@@ -1,7 +1,10 @@
-import { Questions } from '../main.js'
-import { cardsCreate } from '../Cards/cardsCreate.js'
 
-export const LisneterBtn = (correct, i) => {
+import { Questions } from '../main.js'
+
+import { cardFinish } from '../Cards/cardFinish.js'
+import { warning } from '../Cards/warning.js'
+
+export const LisneterBtn = (correct, i, checkCorrect) => {
   const $option1 = document.querySelector('#option1')
   const $option2 = document.querySelector('#option2')
   const $option3 = document.querySelector('#option3')
@@ -9,8 +12,10 @@ export const LisneterBtn = (correct, i) => {
 
   let optionChosed
 
+
   $option1.addEventListener('click', () => {
     optionChosed = $option1.children[0].textContent
+
 
     $option1.classList.add('checked')
     $option2.classList.remove('checked')
@@ -52,16 +57,28 @@ export const LisneterBtn = (correct, i) => {
   const $btnSendQuestion = document.querySelector('#sendQuestion')
   $btnSendQuestion.addEventListener('click', () => {
 
+    if (i + 1 === Questions.length) {
+      cardFinish(checkCorrect, Questions.length)
+      return
+    }
 
+    let situation = ''
     if (optionChosed === correct) {
-      alert('acertou')
+      situation = 'Acertou'
+      checkCorrect++
+    } else if (optionChosed === undefined) {
+      situation = 'Por gentileza escolha uma opção'
 
 
     } else {
-      alert('errou')
-
+      situation = 'Errou'
     }
 
-    cardsCreate(Questions[i + 1][0], i + 1)
+    warning(situation, Questions, i, checkCorrect)
+
+
   })
+
+
 }
+

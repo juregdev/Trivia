@@ -2,19 +2,20 @@ import { LisneterBtn } from '../Listeners/ListenerOptions.js'
 const $chosses = document.querySelector('#chosses')
 
 
-export const cardsCreate = (question, i) => {
+export const cardsCreate = (question, i, checkCorrect) => {
   const card = `<div id="modal">
-  <h1 id="question">Pergunta 1</h1>
+  <h1 id="question">Pergunta ${i + 1}</h1>
   <p>${question.statement}</p>
   <div id="options">
  ${sortOptions(question.options)}
   </div>
 
   <button id="sendQuestion">Enviar Resposta</button>
-</div>`
+</div>
+`
 
   $chosses.innerHTML = card
-  LisneterBtn(question.options.correct, i)
+  LisneterBtn(question.options.correct, i, checkCorrect)
 
   sortOptions(question.options)
 }
