@@ -44,13 +44,13 @@ textarea {
   height: 5rem;
 }
 
-#conteiner {
+#container {
   height: calc(100vh - 5rem);
   width: 100vw;
   padding: 1rem;
 }
 
-#conteiner #chosses {
+#container #chosses {
   width: 100%;
   height: 100%;
 
@@ -62,7 +62,7 @@ textarea {
   gap: .5rem;
 }
 
-#conteiner #chosses button {
+#container #chosses button {
   position: relative;
   cursor: pointer;
   width: 33%;
@@ -79,12 +79,12 @@ textarea {
   transition: .5s;
 }
 
-#conteiner #chosses button:last-child {
+#container #chosses button:last-child {
   height: 10%;
   width: 100%;
 }
 
-#conteiner #chosses .btnOption:hover {
+#container #chosses .btnOption:hover {
   background: #47b77f;
   color: #fff;
   z-index: 1;
@@ -97,16 +97,16 @@ textarea {
 @media screen and (max-width:320px) {
 
 
-  #conteiner button {
+  #container button {
     width: 45%;
   }
 }
 
-#conteiner button:active {
+#container button:active {
   opacity: .6;
 }
 
-#conteiner #modal {
+#container #modal {
   padding: 1rem 7rem 7rem 7rem;
   position: relative;
   background: rgb(86, 123, 209);
@@ -123,13 +123,13 @@ textarea {
 
 }
 
-#conteiner #modal p {
+#container #modal p {
   font-size: 1.2rem;
   font-weight: 500
 }
 
 
-#conteiner #modal #options {
+#container #modal #options {
   width: 100%;
 
   display: flex;
@@ -141,7 +141,7 @@ textarea {
   font-size: 1.1rem;
 }
 
-#conteiner #modal #options div {
+#container #modal #options div {
   width: 100%;
   padding: .5rem;
   cursor: pointer;
@@ -151,29 +151,29 @@ textarea {
   transition: .3s
 }
 
-#conteiner #modal #options div:hover {
+#container #modal #options div:hover {
   background: rgb(110, 141, 212);
 }
 
-#conteiner #modal #options div p {
+#container #modal #options div p {
   font-weight: 300;
 }
 
-#conteiner #modal #options .checked {
+#container #modal #options .checked {
   background: rgb(55, 92, 180);
 
   color: #ffff
 }
 
-#conteiner #modal #options .checked p {
+#container #modal #options .checked p {
   font-weight: 600;
 }
 
-#conteiner #modal #options .checked:hover {
+#container #modal #options .checked:hover {
   background: rgb(55, 92, 180)
 }
 
-#conteiner #modal #sendQuestion {
+#container #modal #sendQuestion {
   width: 80%;
   height: 4rem;
 

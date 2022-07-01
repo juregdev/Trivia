@@ -10,12 +10,10 @@ import { cardsCreate, shuffleArray } from './Cards/cardsCreate.js'
 export let Questions = []
 
 const QuestionsOrganization = (QuestionChossed) => {
-  let questionOrder = []
-  QuestionChossed.forEach((Question) => {
-    questionOrder = [...questionOrder, [Question]]
-  })
-  Questions = shuffleArray(questionOrder)
-  cardsCreate(Questions[0][0], 0, 0)
+
+
+  Questions = shuffleArray(QuestionChossed)
+  cardsCreate(Questions[0], 0, 0)
 }
 
 window.addEventListener('click', (e) => {

@@ -4,7 +4,7 @@ export const warning = (textWarning, Questions, i, checkCorrect) => {
   const message = ` 
   <div id="warnings">
     <p style='color:${textWarning === 'Acertou' ? 'green' : 'red'}'>${textWarning}</p>
-    ${correctConstations(textWarning, Questions[i][0].options.correct)}
+    ${correctConstations(textWarning, Questions[i].options.correct)}
   </div>`
 
   document.querySelector('#chosses').innerHTML += message
@@ -13,13 +13,13 @@ export const warning = (textWarning, Questions, i, checkCorrect) => {
     setTimeout(() => {
       document.querySelector('#chosses').removeChild(document.querySelector('#warnings'))
 
-      LisneterBtn(Questions[i][0].options.correct, i, checkCorrect)
+      LisneterBtn(Questions[i].options.correct, i, checkCorrect)
     }, 2000)
 
   }
   else {
     setTimeout(() => {
-      cardsCreate(Questions[i + 1][0], i + 1, checkCorrect)
+      cardsCreate(Questions[i + 1], i + 1, checkCorrect)
     }, 2000)
   }
 }
